@@ -10,7 +10,7 @@ public class ChinaWordsProcess {
 
     public String TakeWords()
     {
-        return cdb.GenRandomWord(78);
+        return cdb.GenRandomWord(1541);
     }
     public String TakeWords(String format)
     {

@@ -10,20 +10,36 @@ public class Poetry {
      * @param poetryTitle 诗的标题
      * @param lines 诗的行数
      */
-    public String CreatePoetry(String poetryTitle,int lines,int words)
+    public List<String> CreatePoetry(String poetryTitle,int lines,int words)
     {
+        System.out.println("    "+poetryTitle+"   ");
         ChinaWordsProcess chinaWordsProcess=new ChinaWordsProcess();
         List<String> poetry=new ArrayList<>();;
-        String newpoetry = "";
         for(int i=0;i<lines;i++)
         {
             poetry.add( chinaWordsProcess.GetLines(words));
         }
-        for(int i=0;i<poetry.size();i++)
+        return poetry;
+    }
+
+    public void SharePoetry(List<String> poetry)
+    {
+        for (String s : poetry)
         {
-            newpoetry=newpoetry+ poetry.get(i);
+            System.out.println(s);
         }
-        return newpoetry;
+    }
+
+    /**
+     * 对生成的诗词进行格式上的修整
+     * @param poetry
+     */
+    public void FormatPoetry(List<String> poetry)
+    {
+        for (String s : poetry)
+        {
+
+        }
     }
 
 }
